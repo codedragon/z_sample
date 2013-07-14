@@ -1,0 +1,39 @@
+body {
+     font-family: arial, helvetica, serif;
+}
+
+ul { /* all lists */
+   padding: 0;
+   margin: 0;
+   list-style: none;
+}
+
+li { /* all list items */
+   float: left;
+   position: relative;
+   width: 10em;
+}
+
+li ul { /* second-level lists */
+   display: none;
+   position: absolute;
+   top: 1em;
+   left: 0;
+}
+
+li>ul { /* to override top and left in browsers other than IE, which will position to the top right of the containing li, rather than bottom left */
+      top: auto;
+      left: auto;
+}
+
+li:hover ul, li.over ul { /* lists nested under hovered list items */
+	 display: block;
+}
+
+#content {
+	 clear: left;
+}
+
+
+
+

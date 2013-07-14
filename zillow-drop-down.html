@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="zillow.css">
+<title>Playing around with drop down menus for Zillow</title>
+<script src="zillow.js"></script>
+<script>
+function favCity()
+{
+var countrylist=document.getElementById("countryList");
+document.getElementById("favorite").value=countrylist.options[countrylist.selectedIndex].text;
+}
+</script>
+</head>
+
+<body>
+<ul id="nav">
+  <li>Cities
+    <ul> 
+      <li>USA</li>
+      <li>Italy</li>
+      <li>Japan</li>
+      <li>Argentina</li>
+      <li>Australia</li>
+    </ul>
+  </li>
+  <li>another link
+    <ul>
+      <li>bleh</li>
+      <li>bleh</li>
+      <li>bleh</li>
+    </ul>
+  </li>
+</ul>
+<div id="content">
+<br>
+<br>
+<form>
+Select Your Favorite City:
+<select id="countryList" onchange="favCity()">
+  <option></option>
+  <option>USA</option>
+  <option>Italy</option>
+  <option>Japan</option>
+  <option>Argentina</option>
+  <option>Australia</option>
+</select>
+<p>Your favorite City is: <input type="text" id="favorite" size="18"></p>
+</form>
+</div>
+</body>
+</html>
+
+
+
+
+

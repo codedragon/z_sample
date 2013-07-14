@@ -38,14 +38,14 @@ margin: 0 200px 0 230px; /*Margins for content column. Should be "0 RightColumnW
 float: left;
 width: 230px; /*Width of left column*/
 margin-left: -100%;
-background: #C8FC98;
+background: #D8F781;
 }
 
 #rightcolumn{
 float: left;
 width: 200px; /*Width of right column*/
 margin-left: -200px; /*Set left marginto -(RightColumnWidth)*/
-background: #FDE95E;
+background: #F2F5A9;
 }
 
 #footer{
@@ -58,7 +58,7 @@ padding: 4px 0;
 }
 
 #footer a{
-color: #FFFF80;
+color: #FFFFFF;
 }
 
 .innertube{
@@ -76,7 +76,7 @@ margin-top: 0;
 
 <div id="contentwrapper">
 <div id="contentcolumn">
-<div class="innertube"><b>Content Column: <em>Fluid</em></b> <p> Testing the middle column. I give you a small excerpt from a blog post I enjoyed from Zillow's Engineering Blog. </p><p>Charts are a really important part of the content on Zillow. We generate a lot of complex and interesting data about homes, and charts help our users visualize and understand it. One of our most important metrics is the <a title="Zillow Home Value Index" href="http://www.zillow.com/blog/research/2012/01/21/zillow-home-value-index-methodology/">Zillow Home Value Index</a> (ZHVI), which is used throughout our services, and has also appeared in <a href="http://www.zillow.com/blog/research/recent-collaborations/">several academic studies</a> and <a href="http://www.zillow.com/blog/research/2011/09/20/zillow-chief-economist-testimony-on-glut-of-foreclosures/">Congressional testimony</a>.  Here&#8217;s an example chart of the Zestimate of a home, the ZHVI in the zipcode, and the ZHVI in the city, over time.</p>
+<div class="innertube"><b>Content Column: <em>Fluid</em></b> <p> Testing the middle column. I give you a small excerpt from a blog post I enjoyed from <a title="Zillow's Engineering Blog" href="http://engineering.zillow.com/paparazzi-charts/">Zillow's Engineering Blog"</a>. </p><p>Charts are a really important part of the content on Zillow. We generate a lot of complex and interesting data about homes, and charts help our users visualize and understand it. One of our most important metrics is the <a title="Zillow Home Value Index" href="http://www.zillow.com/blog/research/2012/01/21/zillow-home-value-index-methodology/">Zillow Home Value Index</a> (ZHVI), which is used throughout our services, and has also appeared in <a href="http://www.zillow.com/blog/research/recent-collaborations/">several academic studies</a> and <a href="http://www.zillow.com/blog/research/2011/09/20/zillow-chief-economist-testimony-on-glut-of-foreclosures/">Congressional testimony</a>.  Here&#8217;s an example chart of the Zestimate of a home, the ZHVI in the zipcode, and the ZHVI in the city, over time.</p>
 <p><a href="http://engineering.zillow.com/wp-content/uploads/2012/08/paparazzi_chart2.png"><img class="size-full wp-image-314 aligncenter" src="http://3.z-engineering.diverse-cdn.com/wp-content/uploads/2012/08/662x324xpaparazzi_chart2.png.pagespeed.ic.PnDPQXJAJG.png" alt="" width="662" height="324"/></a></p>
 <p><span id="more-217"></span>Over the years, we&#8217;ve experimented with several approaches to putting charts in the browser, ranging from pure server side rendering, to Flash, to cross-platform Javascript. In the end, we&#8217;ve settled on a hybrid implementation that optimizes for both speed and interactivity. Here&#8217;s how it works. First, we render a chart on the server as a PNG. Then, when the client downloads that PNG, we use a bit of Javascript to create interaction on top of the PNG.</p>
 <p>The reason this works well is that we do the heavy CPU lifting on the server side to render the chart, using a Javascript charting library. Client browsers can request just the PNG of the chart for the smallest possible payload or grab a JSONP (<a href="http://www.json-p.org/">http://www.json-p.org/</a>) response that contains both the chart image and interaction meta-data in the same payload. A tiny 20KB client side script can grab the JSONP version and layer a scrub line and legend on top to provide basic client side chart interactions.</p>
@@ -108,9 +108,46 @@ margin-top: 0;
 </div>
 
 <div id="rightcolumn">
-<div class="innertube"><b>Right Column: <em>200px</em></b> <p> Testing the right column. For testing the right column, I present The Jaberwocky.</p></div>
+<div class="innertube"><b>Right Column: <em>200px</em></b> <p> Testing the right column. For testing the right column, I present The Jaberwocky.</p>
+<p><br />
+"<b>Jabberwocky</b>"<br />
+<br />
+'Twas brillig, and the slithy toves<br />
+Did gyre and gimble in the wabe;<br />
+All mimsy were the borogoves,<br />
+And the mome raths outgrabe.<br />
+<br />
+"Beware the Jabberwock, my son!<br />
+The jaws that bite, the claws that catch!<br />
+Beware the Jubjub bird, and shun<br />
+The frumious Bandersnatch!"<br />
+<br />
+He took his vorpal sword in hand:<br />
+Long time the manxome foe he sought—<br />
+So rested he by the Tumtum tree,<br />
+And stood awhile in thought.<br />
+<br />
+And as in uffish thought he stood,<br />
+The Jabberwock, with eyes of flame,<br />
+Came whiffling through the tulgey wood,<br />
+And burbled as it came!<br />
+<br />
+One, two! One, two! and through and through<br />
+The vorpal blade went snicker-snack!<br />
+He left it dead, and with its head<br />
+He went galumphing back.<br />
+<br />
+"And hast thou slain the Jabberwock?<br />
+Come to my arms, my beamish boy!<br />
+O frabjous day! Callooh! Callay!"<br />
+He chortled in his joy.<br />
+<br />
+'Twas brillig, and the slithy toves<br />
+Did gyre and gimble in the wabe;<br />
+All mimsy were the borogoves,<br />
+And the mome raths outgrabe.</p>
 </div>
-
+</div>
 <div id="footer"><a href="http://www.mariakathryn.net/">Written by Maria McKinley for Zillow</a></div>
 
 </div>

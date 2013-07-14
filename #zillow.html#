@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Playing around with columns for Zillow</title>
+<style type="text/css">
+
+body{
+margin:0;
+padding:0;
+line-height: 1.5em;
+}
+
+b{font-size: 110%;}
+em{color: red;}
+
+#topsection{
+background: #EAEAEA;
+height: 90px; /*Height of top section*/
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+}
+
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#contentcolumn{
+margin: 0 200px 0 230px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+}
+
+#leftcolumn{
+float: left;
+width: 230px; /*Width of left column*/
+margin-left: -100%;
+background: #C8FC98;
+}
+
+#rightcolumn{
+float: left;
+width: 200px; /*Width of right column*/
+margin-left: -200px; /*Set left marginto -(RightColumnWidth)*/
+background: #FDE95E;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+
+</style>
+
+</head>
+<body>
+<div id="maincontainer">
+
+<div id="topsection"><div class="innertube"><h1>Playing around with Columns for Zillow</h1></div></div>
+
+<div id="contentwrapper">
+<div id="contentcolumn">
+<div class="innertube"><b>Content Column: <em>Fluid</em></b> <p> Testing the middle column. I give you a small excerpt from a blog post I enjoyed from Zillow's Engineering Blog. </p><p>Charts are a really important part of the content on Zillow. We generate a lot of complex and interesting data about homes, and charts help our users visualize and understand it. One of our most important metrics is the <a title="Zillow Home Value Index" href="http://www.zillow.com/blog/research/2012/01/21/zillow-home-value-index-methodology/">Zillow Home Value Index</a> (ZHVI), which is used throughout our services, and has also appeared in <a href="http://www.zillow.com/blog/research/recent-collaborations/">several academic studies</a> and <a href="http://www.zillow.com/blog/research/2011/09/20/zillow-chief-economist-testimony-on-glut-of-foreclosures/">Congressional testimony</a>.  Here&#8217;s an example chart of the Zestimate of a home, the ZHVI in the zipcode, and the ZHVI in the city, over time.</p>
+<p><a href="http://engineering.zillow.com/wp-content/uploads/2012/08/paparazzi_chart2.png"><img class="size-full wp-image-314 aligncenter" src="http://3.z-engineering.diverse-cdn.com/wp-content/uploads/2012/08/662x324xpaparazzi_chart2.png.pagespeed.ic.PnDPQXJAJG.png" alt="" width="662" height="324"/></a></p>
+<p><span id="more-217"></span>Over the years, we&#8217;ve experimented with several approaches to putting charts in the browser, ranging from pure server side rendering, to Flash, to cross-platform Javascript. In the end, we&#8217;ve settled on a hybrid implementation that optimizes for both speed and interactivity. Here&#8217;s how it works. First, we render a chart on the server as a PNG. Then, when the client downloads that PNG, we use a bit of Javascript to create interaction on top of the PNG.</p>
+<p>The reason this works well is that we do the heavy CPU lifting on the server side to render the chart, using a Javascript charting library. Client browsers can request just the PNG of the chart for the smallest possible payload or grab a JSONP (<a href="http://www.json-p.org/">http://www.json-p.org/</a>) response that contains both the chart image and interaction meta-data in the same payload. A tiny 20KB client side script can grab the JSONP version and layer a scrub line and legend on top to provide basic client side chart interactions.</p>
+<p>Drawing charts server side is a little odd these days. Drawing charts on the server side using Javascript, then returning the result as a PNG is just plain weird. But, it&#8217;s a good kind of weird.</p></div>
+</div>
+</div>
+
+<div id="leftcolumn">
+<div class="innertube"><b>Left Column: <em>180px</em></b> <p> Testing the left column </p></div>
+
+</div>
+
+<div id="rightcolumn">
+<div class="innertube"><b>Right Column: <em>200px</em></b> <p> Testing the right column</p></div>
+</div>
+
+<div id="footer"><a href="http://www.mariakathryn.net/">Written by Maria McKinley for Zillow</a></div>
+
+</div>
+</body>
+</html>

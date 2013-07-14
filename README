@@ -1,0 +1,6 @@
+Webpages created for Zillow Code Sample. Requirements:
+
+1. Using valid HTML and CSS, create a document with three-column layout. The left and right columns are fixed width, 180px and 200px respectively, and the middle column is liquid, expanding to fill the available space. Ensure that this code works in the top 3 browsers by market share.
+
+2. Write HTML, CSS, and JavaScript code to implement a short drop-down menu. The main menu should be a drop-down with 5 menu items; when the user mouses over one of the menu items, a second drop-down submenu should pop out to the right of the main menu.
+

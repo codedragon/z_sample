@@ -2,34 +2,69 @@ body {
      font-family: arial, helvetica, serif;
 }
 
-ul { /* all lists */
-   padding: 0;
-   margin: 0;
-   list-style: none;
+#nav, #nav ul { /* all lists */
+     float: left;
+     width: 24em;
+     padding: 0;
+     list-style: none;
+     line-height: 1;
+     border: solid #f5f5f5;	
+     border-width: 2px 2px;
+     margin: 0 0 1em 0;
+     background: white
+}     
+
+#nav a {
+     display: block;
+     width: 10em;	
 }
 
-li { /* all list items */
-   float: left;
-   position: relative;
-   width: 10em;
+#nav li { /* all list items */
+     float: left;
+     padding: 1em;
+     width: 10em;
 }
 
-li ul { /* second-level lists */
-   display: none;
-   position: absolute;
-   top: 1em;
-   left: 0;
+/*
+Would be nice to use display: none to hide, 
+but this won't work with screen readers, so use left:-999em 
+to move list out of view and then left: auto to bring it back.
+*/
+#nav li ul { /* first-level dropdown */
+     position: absolute;
+     width: 14.4em;
+     height: auto;
+     border-width: 0.25em;
+     margin: 0;
+     left: -999em;
 }
 
-li>ul { /* to override top and left in browsers other than IE, which will position to the top right of the containing li, rather than bottom left */
-      top: auto;
-      left: auto;
+#nav li li {
+     padding-right: 1em;
+     width: 12.5em;
 }
 
-li:hover ul, li.over ul { /* lists nested under hovered list items */
-	 display: block;
+/* 2nd level dropdowns drop next to their corresponding list item */
+#nav li ul ul {
+     margin: -2em 0 0 13em;
 }
 
+/*Can't have the 2nd level dropdown showing all the time*/
+#nav li:hover ul ul, #nav li.iehover ul ul {
+     left: -999em;
+}
+
+/* Lists should appear when we hover on corresponding list items */
+#nav li:hover ul, #nav li li:hover ul, #nav li.iehover ul, #nav li li.iehover ul {
+     left: auto;
+}
+
+/* Make the choices you are making highlighted */
+#nav li:hover, #nav li.sfhover {
+     background: #f2f2f2;
+}
+
+/* floating things, so need to clear left */
 #content {
 	 clear: left;
 }

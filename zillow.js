@@ -1,18 +1,17 @@
-makeList = function() { 
-    if (document.all&&document;.getElementById) {
-	navRoot = document.getElementById("nav");
-	for (i=0; i<navRoot.childNodes.length; i++) {
-	    node = navRoot.childNodes[i];
-	     if (node.nodeName=="LI") {
-		 node.onmouseover=function() {
-		     this.className+=" over";
-		 }
-		 node.onmouseout=function() {
-		     this.className=this.className.replace(" over", "");
-		 }
-	     }
+// function for IE to hover for our dropdown menu
+ieHover = function() {
+    // Only want navigation lists to dropdown.
+    var dDown = document.getElementById("nav").getElementsByTagName("LI");
+    for (var i=0; i<dDown.length; i++) {
+	dDown[i].onmouseover=function() {
+	    this.className+=" iehover";
+	}
+	dDown[i].onmouseout=function() {
+	    // get rid of class when done
+	    this.className=this.className.replace(new RegExp(" iehover\\b"), "");
 	}
     }
-}
-window.onload=makeList;
+} 
+//only necessary for IE
+if (window.attachEvent) window.attachEvent("onload", ieHover);
 

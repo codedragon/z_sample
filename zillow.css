@@ -66,10 +66,17 @@ first-level dropdown */
      background: #f2f2f2;
 }
 
+/* Click and change the color! */
+#nav li li li:active, #nav li li li.sfactive {
+     background: #c0c0c0;
+}
+
 /* floating things, so need to clear left */
 #content {
 	 clear: left;
 }
+
+
 
 
 

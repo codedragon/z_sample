@@ -6,15 +6,7 @@
 <link rel="stylesheet" type="text/css" href="zillow.css">
 <title>Playing around with drop down menus for Zillow</title>
 <script src="zillow.js"></script>
-<script>
-function favCity()
-{
-var countrylist=document.getElementById("countryList");
-document.getElementById("favorite").value=countrylist.options[countrylist.selectedIndex].text;
-}
-</script>
 </head>
-
 <body>
 <ul id="nav">
   <li>Cities
@@ -66,11 +58,29 @@ document.getElementById("favorite").value=countrylist.options[countrylist.select
       </li>
     </ul>
   </li>
-  <li>another link
+  <li>Stars
     <ul>
-      <li>bleh</li>
-      <li>bleh</li>
-      <li>bleh</li>
+      <li><a href="http://www.astro.wisc.edu/~dolan/constellations/constellations/Centaurus.html">Centaurus</a>
+	<ul>
+	  <li><a href="http://www.astro.wisc.edu/~dolan/constellations/hr/5459.html">Rigel Kentaurus</a></li>
+	  <li><a href="http://www.astro.wisc.edu/~dolan/constellations/hr/5267.html">AGENA</a></li>
+	  <li><a href="http://www.astro.wisc.edu/~dolan/constellations/hr/5288.html">Menkent</a></li>
+	</ul>
+      </li>
+      <li><a href="http://www.astro.wisc.edu/~dolan/constellations/constellations/Orion.html">Orion</a>
+	<ul>
+	  <li><a href="http://www.astro.wisc.edu/~dolan/constellations/hr/2061.html">BETELGEUSE</a></li>
+	  <li><a href="http://www.astro.wisc.edu/~dolan/constellations/hr/1790.html">BELLATRIX</a></li>
+	  <li><a href="http://www.astro.wisc.edu/~dolan/constellations/hr/1713.html">RIGEL</a></li>
+	</ul>
+      </li>
+      <li><a href="http://www.astro.wisc.edu/~dolan/constellations/constellations/Ursa_Major.html">Ursa Major</a>
+	<ul>
+	  <li><a href="http://www.astro.wisc.edu/~dolan/constellations/hr/4301.html">DUBHE</a></li>
+	  <li><a href="http://www.astro.wisc.edu/~dolan/constellations/hr/4295.html">MERAK</a></li>
+	  <li><a href="http://www.astro.wisc.edu/~dolan/constellations/hr/4554.html">PHAD</a></li>
+	</ul>
+      </li>
     </ul>
   </li>
 </ul>

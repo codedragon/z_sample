@@ -2,7 +2,8 @@ body {
      font-family: arial, helvetica, serif;
 }
 
-#nav, #nav ul { /* all lists */
+/* all lists */
+#nav, #nav ul { 
      float: left;
      width: 24em;
      padding: 0;
@@ -19,7 +20,8 @@ body {
      width: 10em;	
 }
 
-#nav li { /* all list items */
+/* all list items */
+#nav li { 
      float: left;
      padding: 1em;
      width: 10em;
@@ -29,8 +31,8 @@ body {
 Would be nice to use display: none to hide, 
 but this won't work with screen readers, so use left:-999em 
 to move list out of view and then left: auto to bring it back.
-*/
-#nav li ul { /* first-level dropdown */
+first-level dropdown */
+#nav li ul { 
      position: absolute;
      width: 14.4em;
      height: auto;

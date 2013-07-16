@@ -17,7 +17,7 @@ if (window.attachEvent) window.attachEvent("onload", ieHover);
 
 // function for IE to click for our dropdown menu
 ieActive = function() {
-    // Only want navigation lists to dropdown.
+    // Only want navigation lists to have the special active affect.
     var dDown = document.getElementById("nav").getElementsByTagName("LI");
     for (var i=0; i<dDown.length; i++) {
 	dDown[i].onmousedown=function() {
